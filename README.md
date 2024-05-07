@@ -1,94 +1,84 @@
+
+
+```markdown
+# SEO Audit Tool
+
+Explore comprehensive SEO insights with our SEO Audit Tool. This tool crawls your website, identifying SEO issues and opportunities to enhance your site's performance.
+
+## Table of Contents
+
 - [Features](#features)
 - [Input](#input)
 - [Results](#results)
-- [Example result](#example-result)
+- [Example Result](#example-result)
+- [Connect With Us](#connect-with-us)
+- [Support](#support)
 
 ## Features
-This SEO audit tool can crawl all the web pages on your website and alert you to errors or issues that could affect SEO performance.
+
+Our SEO Audit Tool performs a detailed crawl of your website, checking for a range of SEO factors that influence your site’s visibility and performance.
 
 ## Input
-Web URL is the most important input that you should set, as this is address is where the tool will start crawling.
+
+**Web URL**: The starting point for the crawl. Set this to the homepage or a specific page URL you want to analyze.
 
 ## Results
-All results are stored in Apify datasets. Each result has the following attributes:
 
-- url - URL of page
-- title - title of page
-- isLoaded - true if page was loaded properly
-- isGoogleAnalyticsObject - check if Google Analytics object is included in the page
-- isGoogleAnalyticsFunc - check if Google Analytics function is included in the page
-- isCharacterEncode - check if page has meta tag with charset attribute
-- isMetaDescription - check if page has meta description
-- metaDescription - value from meta description
-- isMetaDescriptionEnoughLong - check if length of meta description is long enough
-- isDoctype - check if doctype is included in page
-- isTitle - check if title element is included in page
-- isTitleEnoughLong - check if title is long enough
-- isH1 - check if H1 element is present on page
-- h1 - value from H1 element
-- isH1OnlyOne - check that there is only one H1 on page
-- isH2 - check if H2 element is present on page
-- linksCount - number of links on page
-- isTooEnoughLinks - check if there are enough links on page
-- internalNoFollowLinks - list of no-follow links on page
-- internalNoFollowLinksCount - number of no-follow links on page
-- notOptimizedImages - list of unoptimized images (does not include alt tag)
-- notOptimizedImagesCount - number of unoptimized images
-- wordsCount - number of words on page
-- isContentEnoughLong - check if content is long enough
-- isViewport - check if meta tag viewport is set on page
-- isAmp - check if amp tag is set on page
-- isNotIframe - check that there is no iframe
-- brokenLinks - list of broken links on page
-- brokenLinksCount - number of broken links on page
-- brokenImages - list of broken images on page
-- brokenImagesCount - number of broken image links on page
-- jsonLd - data from JSON-LD specifications
-- microdata - data from microdata specifications
+Results are stored in Apify datasets with attributes such as page URL, title, load status, presence of SEO tags, and much more, providing a comprehensive view of your SEO health.
 
-## Example result
+### Attributes Include:
 
-```javascript
+- **url**: Page URL
+- **title**: Page title
+- **isLoaded**: Page load status
+- **SEO Tags**: Checks for Google Analytics, meta tags, and character encodings
+- **Content Checks**: Evaluates the presence and adequacy of titles, descriptions, H1 tags, and overall content length
+- **Link Analysis**: Counts internal and external links, checks for no-follow attributes
+- **Media Analysis**: Lists unoptimized images and counts broken image links
+- **Advanced Checks**: Assesses viewport settings, AMP compatibility, and the absence of iframes
+- **Error Tracking**: Lists and counts broken links
+- **Structured Data**: Checks for JSON-LD and Microdata
+
+## Example Result
+
+```json
 {
-  "url": "https://www.apify.com/",
-  "title": "Web Scraping, Data Extraction and Automation - Apify",
+  "url": "https://www.example.com/",
+  "title": "Your Online Store - Home",
   "isLoaded": true,
   "isGoogleAnalyticsObject": true,
-  "isGoogleAnalyticsFunc": false,
-  "isCharacterEncode": true,
-  "isMetaDescription": true,
-  "metaDescription": "Apify extracts data from websites, crawls lists of URLs and automates workflows on the web. Turn any website into an API in a few minutes!",
+  "metaDescription": "Discover our range of products.",
   "isMetaDescriptionEnoughLong": true,
-  "isDoctype": true,
-  "isTitle": true,
   "isTitleEnoughLong": true,
-  "isH1": true,
-  "h1": "The web scraping and automation platform",
+  "h1": "Welcome to Your Online Store",
   "isH1OnlyOne": true,
-  "isH2": true,
-  "linksCount": 91,
-  "isTooEnoughlinks": true,
-  "internalNoFollowLinks": [],
+  "linksCount": 87,
   "internalNoFollowLinksCount": 0,
-  "notOptimizedImgs": [],
-  "notOptimizedImagesCount": 0,
-  "wordsCount": 1373,
-  "isContentEnoughLong": false,
+  "notOptimizedImagesCount": 3,
+  "wordsCount": 1152,
+  "isContentEnoughLong": true,
   "isViewport": true,
-  "isAmp": true,
-  "isNotIframe": false,
-  "brokenLinks": [],
   "brokenLinksCount": 0,
-  "brokenImages": [],
-  "brokenImagesCount": 0,
+  "brokenImagesCount": 2,
   "jsonLd": {
-    "isJsonLd": false,
-    "jsonLdData": {}
+    "isJsonLd": true
   },
   "microdata": {
-    "isMicrodata": false,
-    "microdata": []
+    "isMicrodata": true
   }
 }
 ```
 
+## Connect With Us
+
+- **YouTube**: [Visit our channel](https://www.youtube.com/@CodeMaster-421)
+- **Instagram**: [Follow us on Instagram](https://www.instagram.com/quicklifesolutionsofficial/)
+- **AI Newsletter**: [Subscribe to our newsletter](https://sendfox.com/quicklifesolutions)
+- **Free Consultation**: [Book a free consultation call](https://tidycal.com/quicklifesolutions/free-consultation)
+- **More Tools**: [Explore our Apify actors](https://apify.com/dainty_screw)
+
+### Support
+
+- **Discord**: [Raise a Support ticket here](https://discord.gg/2WGj2PDmHb)
+- **Email**: [Contact us](mailto:codemasterdevops@gmail.com)
+```
