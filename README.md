@@ -1,5 +1,4 @@
 
-
 ```markdown
 # SEO Audit Tool
 
